@@ -1,0 +1,166 @@
+.cs-container {
+    width: 50vw;
+    height: 80vh;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 100px 100px, rgba(0, 0, 0, 0.1) 0px 100px 100px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 9999;
+}
+
+.close-btn {
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: 0.5px solid gray;
+    float: right;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.form-card {
+
+    margin: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+}
+
+label {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+input, textarea, select, option {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-weight: 500;
+    font-size: 1.2rem;
+    resize: none;
+}
+
+input:focus, textarea:focus, select:focus, option:focus {
+    padding-left: 5px;
+    outline: 0.1px solid rgb(226, 224, 224);
+}
+
+input {
+    height: 40px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgb(226, 223, 223);
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(185, 181, 181);
+}
+
+.btn-box button {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    border: 0.5px solid gray;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.btn-box button:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.btn-box button:first-child {
+    background-color: rgb(102, 144, 233);
+}
+
+.btn-box button:last-child {
+    background-color: rgb(221, 80, 104);
+}
+
+@media screen and (max-width:400px) {
+    .cs-container {
+        width: 80vw;
+        left: 25px;
+    }
+
+    .form-card {
+        margin: 0;
+    }
+
+    form {
+        width: 90%;
+        padding: 0;
+    }
+
+    label {
+        padding: 5px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-box button {
+        width: 80px;
+    }
+
+}
+
+
+@media screen and (min-width:401px) and (max-width: 720px) {
+    .cs-container {
+        width: 80vw;
+        left: 30px;
+    }
+
+    .form-card {
+        margin: 0;
+    }
+
+    form {
+        width: 90%;
+        padding: 0;
+    }
+
+    .box {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    input, textarea, select, option, label {
+        padding: 5px;
+        width: 100%;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .btn-box button {
+        width: 80px;
+    }
+
+}

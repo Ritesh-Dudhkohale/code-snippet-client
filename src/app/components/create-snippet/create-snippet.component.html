@@ -1,0 +1,34 @@
+<article class="cs-container">
+  <button routerLink="/home" class="close-btn">Close</button>
+
+  <div class="form-card">
+    <form [formGroup]="snippetData" (submit)="onSubmit()">
+      <div class="box">
+        <label for="">Enter Title</label>
+        <input type="text" formControlName="title" />
+      </div>
+      <div class="box">
+        <label for="">Choose program langage</label>
+        <select name="" id="" formControlName="language">
+          @for(lang of langOptions;track lang) {
+          <option [value]="lang">{{ lang | lowercase }}</option>
+          }
+        </select>
+      </div>
+      <div class="box">
+        <label for="">Enter or Paste the Code</label>
+        <textarea
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          formControlName="code"
+        ></textarea>
+      </div>
+      <div class="btn-box">
+        <button>Submit</button>
+        <button>Reset</button>
+      </div>
+    </form>
+  </div>
+</article>

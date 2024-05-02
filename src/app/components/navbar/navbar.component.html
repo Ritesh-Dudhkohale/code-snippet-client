@@ -1,0 +1,18 @@
+<header>
+  <div>
+    <img src="assets/Logo.png" alt="" id="logo" />
+    <h1>Code Snippet</h1>
+  </div>
+  <nav>
+    <ul>
+      <li class="img-box"><img src="assets/Logo.png" alt="" /></li>
+      <li>
+        <p>
+          Hello
+          <span>{{ currentUser |username }}</span>
+        </p>
+      </li>
+      <li><button (click)="logout()">Logout</button></li>
+    </ul>
+  </nav>
+</header>

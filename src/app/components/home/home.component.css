@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container {
+    position: relative;
+}
+
+.create-btn {
+    width: 170px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid gray;
+    margin: 10px 50px 10px 10px;
+    font: 500 1.3rem 'Times New Roman', Times, serif;
+    background-color: rgb(124, 23, 206);
+    color: white;
+    cursor: pointer;
+    position: relative;
+    right: -80%;
+}
+
+.create-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 2px, rgba(0, 0, 0, 0.1) 0px 1px 2px;
+}
+
+.card-box {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 23%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+}
+
+.edit-btn, .delete-btn {
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 40px;
+    background-color: transparent;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 15px;
+}
+
+.edit-btn img {
+    width: 60%;
+    height: auto;
+    cursor: pointer;
+}
+
+.delete-btn img {
+    width: 70%;
+    height: auto;
+    cursor: pointer;
+}
+
+.edit-btn:hover, .delete-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.card-title {
+    font: 600 1.2rem "Roboto Condensed", sans-serif;
+    line-height: 1.5;
+}
+
+.code-box {
+    width: 100%;
+    min-height: 100px;
+    max-height: 300px;
+    text-wrap: pretty;
+    overflow-y: auto;
+    border-radius: 1px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.code-box::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgb(226, 223, 223);
+}
+
+.code-box::-webkit-scrollbar-thumb {
+    background-color: rgb(185, 181, 181);
+}
+
+@media screen and (max-width:400px) {
+    .create-btn {
+        right: -20%;
+    }
+
+    .card-box {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 401px) and (max-width: 720px) {
+
+    .create-btn {
+        right: -60%;
+    }
+
+    .card-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 721px) and (max-width: 1000px) {
+
+    .create-btn {
+        right: -70%;
+    }
+
+
+    .card-box {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        align-items: center;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
