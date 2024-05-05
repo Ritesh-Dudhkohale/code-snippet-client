@@ -74,7 +74,7 @@
 
 .code-box {
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     max-height: 400px;
     overflow-y: scroll;
     border-radius: 1px;
@@ -127,7 +127,7 @@
 
     .card-box {
         flex-direction: row;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         align-items: center;
     }
 
@@ -150,6 +150,6 @@
     }
 
     .card {
-        width: 50%;
+        width: 40%;
     }
 }
