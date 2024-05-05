@@ -5,29 +5,36 @@
   </button>
   <router-outlet></router-outlet>
   <div class="card-box">
-    <div class="card" *ngFor="let snippet of codeSnippets">
-      <button class="edit-btn">
-        <img
-          src="assets/edit-icon.png"
-          alt=""
-          srcset=""
-          (click)="updateSnippet(snippet._id)"
-        />
-      </button>
-      <button class="delete-btn">
-        <img
-          src="assets/delete-icon.png"
-          alt=""
-          srcset=""
-          (click)="deleteSnippet(snippet._id)"
-        />
-      </button>
-      <p class="card-title">Title - {{ snippet.title }}</p>
-      <p class="card-title">Language - {{ snippet.language }}</p>
-      <div>
-        <p class="card-title">Code -</p>
-        <p class="code-box">{{ snippet.code }}</p>
+    <ng-container
+      *ngIf="codeSnippets && codeSnippets.length !== 0; else elseContent"
+    >
+      <div class="card" *ngFor="let snippet of codeSnippets">
+        <button class="edit-btn">
+          <img
+            src="assets/edit-icon.png"
+            alt=""
+            srcset=""
+            (click)="updateSnippet(snippet._id)"
+          />
+        </button>
+        <button class="delete-btn">
+          <img
+            src="assets/delete-icon.png"
+            alt=""
+            srcset=""
+            (click)="deleteSnippet(snippet._id)"
+          />
+        </button>
+        <p class="card-title">Title - {{ snippet.title }}</p>
+        <p class="card-title">Language - {{ snippet.language }}</p>
+        <div>
+          <p class="card-title">Code -</p>
+          <textarea class="code-box" [value]="snippet.code" disabled></textarea>
+        </div>
       </div>
-    </div>
+    </ng-container>
+    <ng-template #elseContent>
+      <p class="no-content">No Snippet Saved...<span>Please Create snippets</span></p>
+    </ng-template>
   </div>
 </article>

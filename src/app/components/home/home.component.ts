@@ -23,13 +23,9 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  constructor(
-    private snippetService: SnippetService,
-    private router: Router
-  ) {}
+  constructor(private snippetService: SnippetService, private router: Router) {}
 
   codeSnippets!: snippet[];
-  
 
   ngOnInit() {
     this.getSnippets();

@@ -30,6 +30,8 @@ export class CreateSnippetComponent {
 
   onSubmit() {
     if (this.snippetData.valid) {
+      console.log(this.snippetData.value.code);
+      
       this.snippetData.value.language = 'JAVA';
       const data = this.snippetData.value as any;
       this.snippetService.createSnippet(data).subscribe({
