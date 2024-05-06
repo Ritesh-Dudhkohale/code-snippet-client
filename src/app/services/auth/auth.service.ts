@@ -9,7 +9,7 @@ import { BehaviorSubject, catchError, of, switchMap, tap } from 'rxjs';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  readonly currentUser = signal('');
+  currentUser = signal('');
   private isAuthenticated = new BehaviorSubject<boolean>(false);
 
   private base_url = 'https://code-snippet-server.onrender.com/api/users';
@@ -27,11 +27,11 @@ export class AuthService {
       })
     );
   }
-  
+
   loadCurrentUser() {
     return this.http.get(this.base_url + '/current-user').pipe(
       tap((res: any) => {
-        this.currentUser.set(res.data);
+        localStorage.setItem('Current User', JSON.stringify(res.data));
       }),
       catchError((err) => {
         console.log('Error while fetching current user', err);
@@ -40,8 +40,13 @@ export class AuthService {
     );
   }
 
+  isLoggedIn() {
+    return !localStorage.getItem('Access Token');
+  }
+
   logoutService() {
     this.isAuthenticated.next(false);
     localStorage.removeItem('Access Token');
+    localStorage.removeItem('Current User');
   }
 }

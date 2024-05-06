@@ -1,4 +1,4 @@
-import { Component, OnInit, Signal } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, Signal } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CommonModule } from '@angular/common';
 import { SnippetService } from '../../services/snippet/snippet.service';
@@ -23,7 +23,11 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  constructor(private snippetService: SnippetService, private router: Router) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private snippetService: SnippetService,
+    private router: Router
+  ) {}
 
   codeSnippets!: snippet[];
 
@@ -46,14 +50,16 @@ export class HomeComponent {
     this.snippetService.deleteSnippet(id).subscribe({
       next: (res) => {
         console.log(res);
+        
       },
       error: (err) => {
         console.log('Error while deleting', err);
       },
     });
+    this.cdr.detectChanges();
   }
 
   updateSnippet(id: string) {
-    this.router.navigate(['/home/update-snippet', id]);
+    this.router.navigate(['/update-snippet', id]);
   }
 }

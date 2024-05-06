@@ -1,6 +1,6 @@
 .cs-container {
     width: 50vw;
-    height: 80vh;
+    height: 85vh;
     position: absolute;
     top: 10%;
     left: 30%;
@@ -25,7 +25,6 @@
 }
 
 .form-card {
-
     margin: 40px;
 }
 
@@ -130,7 +129,7 @@ textarea::-webkit-scrollbar-thumb {
 }
 
 
-@media screen and (min-width:401px) and (max-width: 720px) {
+@media screen and (min-width:401px) and (max-width: 890px) {
     .cs-container {
         width: 80vw;
         left: 30px;

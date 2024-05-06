@@ -1,9 +1,9 @@
 <app-navbar></app-navbar>
 <article class="container">
-  <button routerLink="/home/create-snippet" class="create-btn">
+  <button routerLink="/create-snippet" class="create-btn">
     Create Snippet
   </button>
-  <router-outlet></router-outlet>
+  <!-- <router-outlet></router-outlet> -->
   <div class="card-box">
     <ng-container
       *ngIf="codeSnippets && codeSnippets.length !== 0; else elseContent"

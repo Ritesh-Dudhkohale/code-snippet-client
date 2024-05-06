@@ -36,7 +36,6 @@ export class CreateSnippetComponent {
       const data = this.snippetData.value as any;
       this.snippetService.createSnippet(data).subscribe({
         next: (res) => {
-          console.log(res);
           this.router.navigateByUrl('/home');
         },
         error: (err) => {
