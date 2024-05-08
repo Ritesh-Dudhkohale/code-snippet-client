@@ -40,7 +40,7 @@ export class RegisterComponent {
           this.router.navigateByUrl('/login')
         },
         error: (err) => {
-          alert(err.message);
+          alert(err.error.message);
           console.log(err);
         },
       });

@@ -43,7 +43,7 @@ export class LoginComponent {
         // }
       },
       error: (err) => {
-        alert(err.message);
+        alert(err.error.message);
         console.error('Login error:', err.error); // Handle login error, such as displaying an error message to the user
       },
     });

@@ -39,7 +39,7 @@ export class CreateSnippetComponent {
           this.router.navigateByUrl('/home');
         },
         error: (err) => {
-          alert(err.message);
+          alert(err.error.message);
           console.log('Error Occures', err);
         },
       });
