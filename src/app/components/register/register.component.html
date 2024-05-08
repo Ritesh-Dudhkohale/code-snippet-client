@@ -1,37 +1,38 @@
 <div class="container">
-    <h2>Registration</h2>
-    <form [formGroup]="registerForm" (ngSubmit)="register()">
-        <div>
-            <label for="email">Full Name</label>
-            <input
-              type="text"
-              id="fullname"
-              placeholder="John Doe"
-              formControlName="fullname"
-            />
-          </div>
-        <div>
-        <label for="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          placeholder="johndoe@gmail.com"
-          formControlName="email"
-        />
-      </div>
+  <h2>Registration</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div>
+      <label for="email">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        placeholder="John Doe"
+        formControlName="fullname"
+      />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="johndoe@gmail.com"
+        formControlName="email"
+      />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input
+        type="text"
+        id="password"
+        placeholder="john***"
+        formControlName="password"
+      />
       <div>
-        <label for="password">Password</label>
-        <input
-          type="text"
-          id="password"
-          placeholder="john***"
-          formControlName="password"
-        />
-        <div>
-          <button>Register</button>
-          <p class="loginbtn">Already a member? <a routerLink="/login">Login</a></p>
-        </div>
+        <button>Register</button>
+        <p class="loginbtn">
+          Already a member? <a [routerLink]="/login">Login</a>
+        </p>
       </div>
-    </form>
-  </div>
-  
+    </div>
+  </form>
+</div>
