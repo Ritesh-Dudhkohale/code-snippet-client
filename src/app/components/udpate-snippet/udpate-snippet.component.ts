@@ -51,6 +51,7 @@ export class UdpateSnippetComponent {
           this.router.navigateByUrl('/home');
         },
         error: (err) => {
+          alert(err.message);
           console.log('Error Occures', err);
         },
       });

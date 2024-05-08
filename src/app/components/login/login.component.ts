@@ -39,10 +39,11 @@ export class LoginComponent {
         // if (accessToken) {
         //   // Set the cookie
         //   document.cookie = `accessToken=${accessToken}; path=/;`; // Adjust the cookie name and path as needed
-          this.router.navigate(['/home']);
+        this.router.navigate(['/home']);
         // }
       },
       error: (err) => {
+        alert(err.message);
         console.error('Login error:', err.error); // Handle login error, such as displaying an error message to the user
       },
     });
